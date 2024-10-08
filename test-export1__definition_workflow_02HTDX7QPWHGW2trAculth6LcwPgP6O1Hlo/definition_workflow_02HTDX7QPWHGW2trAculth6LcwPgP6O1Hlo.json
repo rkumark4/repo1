@@ -1,0 +1,68 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_02HTDX7QPWHGW2trAculth6LcwPgP6O1Hlo",
+    "name": "rkmr-test-export-1",
+    "title": "rkmr-test-export-1",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "rkmr-test-export-1",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_02HTDXDJO2C422XhJ2wFQ6HMi951OEud8wq",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "skip_execution": false,
+          "sleep_interval": 1
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_02HTDXW11N5CE7jr9b5mHvvJAh4lLRSz0Yk",
+        "name": "Atomic-Child-Cancel-pause-WF-Input-OPVar",
+        "title": "Atomic-Child-Cancel-pause-WF-Input-OPVar",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "Atomic-Child-Cancel-pause-WF-Input-OPVar",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_02HE4QVEIH4IO18scVgNOWocmeIHiRcQxCH",
+          "workflow_name": "Atomic-Child-Cancel-pause-WF-Input-OPVar"
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "atomic_workflows": [
+    "definition_workflow_02HE4QVEIH4IO18scVgNOWocmeIHiRcQxCH"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_02HE4QVEIH4IO18scVgNOWocmeIHiRcQxCH"
+  ]
+}
