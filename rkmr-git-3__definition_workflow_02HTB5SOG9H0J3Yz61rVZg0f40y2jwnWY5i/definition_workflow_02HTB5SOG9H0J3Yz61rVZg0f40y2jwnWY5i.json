@@ -1,0 +1,82 @@
+{
+  "workflow": {
+    "unique_name": "definition_workflow_02HTB5SOG9H0J3Yz61rVZg0f40y2jwnWY5i",
+    "name": "rkmr-test-wf-git",
+    "title": "rkmr-test-wf-git",
+    "type": "generic.workflow",
+    "base_type": "workflow",
+    "variables": null,
+    "properties": {
+      "atomic": {
+        "is_atomic": false
+      },
+      "delete_workflow_instance": false,
+      "display_name": "rkmr-test-wf-git",
+      "runtime_user": {
+        "target_default": true
+      },
+      "target": {
+        "no_target": true
+      }
+    },
+    "object_type": "definition_workflow",
+    "actions": [
+      {
+        "unique_name": "definition_activity_02HTB5WBN6D662TlJpv9KY0xqlHTppUoDLl",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "skip_execution": false,
+          "sleep_interval": 1
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_02HTP4MMLVROQ2rbbukJlXWS0lXQzsqYKdl",
+        "name": "Atomic-Child-Cancel-pause-WF-Input-OPVar",
+        "title": "Atomic-Child-Cancel-pause-WF-Input-OPVar",
+        "type": "workflow.atomic_workflow",
+        "base_type": "subworkflow",
+        "properties": {
+          "display_name": "Atomic-Child-Cancel-pause-WF-Input-OPVar",
+          "runtime_user": {
+            "target_default": true
+          },
+          "target": {
+            "no_target": true
+          },
+          "workflow_id": "definition_workflow_02HE4QVEIH4IO18scVgNOWocmeIHiRcQxCH",
+          "workflow_name": "Atomic-Child-Cancel-pause-WF-Input-OPVar"
+        },
+        "object_type": "definition_activity"
+      },
+      {
+        "unique_name": "definition_activity_02HU63DGM27L4254zzRme5EsPIwAG5hEc2f",
+        "name": "Sleep",
+        "title": "Sleep",
+        "type": "core.sleep",
+        "base_type": "activity",
+        "properties": {
+          "continue_on_failure": false,
+          "display_name": "Sleep",
+          "skip_execution": false,
+          "sleep_interval": 1
+        },
+        "object_type": "definition_activity"
+      }
+    ],
+    "categories": [
+      "category_1BMfMXSnJMyt5Ihqi7rWJr5N8cf"
+    ]
+  },
+  "atomic_workflows": [
+    "definition_workflow_02HE4QVEIH4IO18scVgNOWocmeIHiRcQxCH"
+  ],
+  "dependent_workflows": [
+    "definition_workflow_02HE4QVEIH4IO18scVgNOWocmeIHiRcQxCH"
+  ]
+}
